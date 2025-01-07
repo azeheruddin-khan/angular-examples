@@ -1,0 +1,25 @@
+<div class="row p-1">
+  <div class="col-sm-12  text-center" [style.background-color]="hslaColor">
+    <p style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier, monospace; color: rgb(255, 255, 255);margin-top:10px;margin-bottom:10px;">hsla({{hueValue}},{{saturationValue+'%'}},{{lightnessValue+'%'}},{{alphaValue | number : '1.1'}})</p>
+
+  </div>
+    <div class="col-sm-3 text-center">
+    
+      <p>HUE</p>
+      <input type="range" id = "red" [min]="minHueValue" [max]="maxHueValue" [(ngModel)]="hueValue" (input)="update()"  ><p>{{hueValue}}</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <p>SATURATION</p>
+      <input type="range" id ="green" [min]="minPercentageValue" [max]="maxPercentageValue"  [(ngModel)]="saturationValue" (input)="update()" ><p>{{saturationValue+'%'}}</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <p>LIGHTNESS</p>
+      <input type="range" id = "blue" [min]="minPercentageValue" [max]="maxPercentageValue"  [(ngModel)]="lightnessValue" (input)="update()" ><p>{{lightnessValue+'%'}}</p>
+     
+    </div>
+    <div class="col-sm-3 text-center">
+      <p>Alpha</p>
+      <input type="range" id = "alpha" [min]="minAlphaValue" [max]="maxAlphaValue" step="0.1"   [(ngModel)]="alphaValue" (input)="update()" ><p>{{alphaValue | number : '1.1'}}</p>
+    
+    </div>
+</div>

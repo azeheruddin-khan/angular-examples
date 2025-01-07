@@ -1,0 +1,27 @@
+<div class="row p-1">
+  <div class="col-sm-12  text-center" [style.background-color]="rgbaColor">
+    <p style="font-size: 120%; font-weight: bold; font-family: Consolas, Courier, monospace; color: rgba(255, 255, 255,1);margin-top:10px;margin-bottom:10px;">rgba({{redValue}},{{greenValue}},{{blueValue}},{{alphaValue}})</p>
+ 
+  </div>
+
+
+    <div class="col-sm-3 text-center">
+    
+      <p>Red</p>
+      <input type="range" id = "red" [min]="minValue" [max]="maxValue" [(ngModel)]="redValue" (input)="update()"  ><p>{{redValue}}</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <p>Green</p>
+      <input type="range" id ="green" [min]="minValue" [max]="maxValue"  [(ngModel)]="greenValue" (input)="update()" ><p>{{greenValue}}</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <p>Blue</p>
+      <input type="range" id = "blue" [min]="minValue" [max]="maxValue"  [(ngModel)]="blueValue" (input)="update()" ><p>{{blueValue}}</p>
+    
+    </div>
+    <div class="col-sm-3 text-center">
+      <p>Alpha</p>
+      <input type="range" id = "alpha" [min]="minAlphaValue" [max]="maxAlphaValue" step="0.1"   [(ngModel)]="alphaValue" (input)="update()" ><p>{{alphaValue | number : '1.1'}}</p>
+    
+    </div>
+</div>
